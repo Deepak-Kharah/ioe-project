@@ -1,0 +1,89 @@
+{% extends 'index/base.html' %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+
+{% block body %}
+    <!-- main section -->
+    <main>
+        <!-- hero -->
+        <section id="hero" class="hero is-primary is-fullheight">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title is-1">We Monitor your consumption</h1>
+                    <h2 class="subtitle is-4">So you don't have to worry about it</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <header class="title has has-text-centered">
+                Ever happened?
+            </header>
+            <ul class="has-text-centered">
+                <li>You were charged more than you were expecting?</li>
+                <li>Your consumption is more than you were expecting?</li>
+                <li>
+                    But you could not act properly as you have no other source to measure
+                    your electric consumption.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section has-background-light">
+            <header class="title has has-text-centered">
+                Well... We have a solution for you.
+            </header>
+            <ul class="has-text-centered">
+                <li>
+                    A smart home device that measures your electric consumption in real time.
+                </li>
+                <li>Notify you when you are consuming more.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <header class="title has has-text-centered">
+                Get started in 3 easy steps
+            </header>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-parent is-4">
+                    <div class="tile notification is-child">
+                        <h3 class="subtitle">Step 1</h3>
+                        <p>
+                            Get the <strong>The Second Meter&trade;</strong> smart energy meter from the <a
+                                href="{% url 'products:products-list' %}" class="has-text-info">shop</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tile is-parent is-4">
+                    <div class="tile notification is-child">
+                        <h3 class="subtitle">Step 2</h3>
+                        <p>
+                            <a href="{% url 'user:signup' %}" class="has-text-info">Sign up</a> for a TSM premium
+                            account on this
+                            site.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tile is-parent is-4">
+                    <div class="tile notification is-child">
+                        <h3 class="subtitle">Step 3</h3>
+                        <p>
+                            Monitor your consumption from <a class="has-text-info" href="{% url 'arduino:dashboard' %}">dashboard</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <p class="subtitle has-text-centered ">And Voilà you are good to go</p>
+        </section>
+    </main>
+    <!-- End of Main -->
+
+{% endblock %}
